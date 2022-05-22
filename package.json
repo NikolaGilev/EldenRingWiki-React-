@@ -1,5 +1,5 @@
 {
-  "name": "domasno3",
+  "name": "EldenRingWiki-React-",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://nikolagilev.github.io/EldenRingWiki-React-/",
@@ -19,14 +19,16 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "server": "json-server --watch db.json --port 5000",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \" json-server --watch db.json --port 5000\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000"
+    "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:5000/quests",
+
   "eslintConfig": {
     "extends": [
       "react-app",
