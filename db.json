@@ -1,92 +1,92 @@
-{
-  "quests": [
-    {
-      "id": 1,
-      "name": "First Quest",
-      "completed": true,
-      "desc": "Lorem ipsum Lorem ipsum...",
-      "steps": {
-        "step1": [
-          "go to place 1",
-          "talk to NPC#1",
-          "touch altar"
-        ],
-        "step2": [
-          "go to place 2",
-          "talk to NPC#2",
-          "clear dungeon #1",
-          "kill boss #1"
-        ],
-        "step3": [
-          "rest at grace #2"
-        ]
-      }
-    },
-    {
-      "id": 2,
-      "name": "Second Quest",
-      "completed": false,
-      "desc": "Lorem ipsum Lorem ipsum...",
-      "steps": {
-        "step1": [
-          "go to place 1",
-          "talk to NPC#1",
-          "touch altar"
-        ],
-        "step2": [
-          "go to place 2",
-          "talk to NPC#2",
-          "clear dungeon #1",
-          "kill boss #1"
-        ],
-        "step3": [
-          "rest at grace #2"
-        ]
-      }
-    },
-    {
-      "id": 3,
-      "name": "Main Quest",
-      "completed": true,
-      "desc": "Lorem ipsum Lorem ipsum...",
-      "steps": {
-        "step1": [
-          "go to place 1",
-          "talk to NPC#1",
-          "touch altar"
-        ],
-        "step2": [
-          "go to place 2",
-          "talk to NPC#2",
-          "clear dungeon #1",
-          "kill boss #1"
-        ],
-        "step3": [
-          "rest at grace #2"
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "name": "First Side Quest",
-      "completed": false,
-      "desc": "Lorem ipsum Lorem ipsum...",
-      "steps": {
-        "step1": [
-          "go to place 1",
-          "talk to NPC#1",
-          "touch altar"
-        ],
-        "step2": [
-          "go to place 2",
-          "talk to NPC#2",
-          "clear dungeon #1",
-          "kill boss #1"
-        ],
-        "step3": [
-          "rest at grace #2"
-        ]
-      }
-    }
-  ]
-}
+//{
+//  "quests": [
+//    {
+//      "id": 1,
+//      "name": "First Quest",
+//      "completed": true,
+//      "desc": "Lorem ipsum Lorem ipsum...",
+//      "steps": {
+//        "step1": [
+//          "go to place 1",
+//          "talk to NPC#1",
+//          "touch altar"
+//        ],
+//        "step2": [
+//          "go to place 2",
+//          "talk to NPC#2",
+//          "clear dungeon #1",
+//          "kill boss #1"
+//        ],
+//        "step3": [
+//          "rest at grace #2"
+//        ]
+//      }
+//    },
+//    {
+//      "id": 2,
+//      "name": "Second Quest",
+//      "completed": false,
+//      "desc": "Lorem ipsum Lorem ipsum...",
+//      "steps": {
+//        "step1": [
+//          "go to place 1",
+//          "talk to NPC#1",
+//          "touch altar"
+//        ],
+//        "step2": [
+//          "go to place 2",
+//          "talk to NPC#2",
+//          "clear dungeon #1",
+//          "kill boss #1"
+//        ],
+//        "step3": [
+//          "rest at grace #2"
+//        ]
+//      }
+//    },
+//    {
+//      "id": 3,
+//      "name": "Main Quest",
+//      "completed": true,
+//      "desc": "Lorem ipsum Lorem ipsum...",
+//      "steps": {
+//        "step1": [
+//          "go to place 1",
+//          "talk to NPC#1",
+//          "touch altar"
+//        ],
+//        "step2": [
+//          "go to place 2",
+//          "talk to NPC#2",
+//          "clear dungeon #1",
+//          "kill boss #1"
+//        ],
+//        "step3": [
+//          "rest at grace #2"
+//        ]
+//      }
+//    },
+//    {
+//      "id": 4,
+//      "name": "First Side Quest",
+//      "completed": false,
+//      "desc": "Lorem ipsum Lorem ipsum...",
+//      "steps": {
+//        "step1": [
+//          "go to place 1",
+//          "talk to NPC#1",
+//          "touch altar"
+//        ],
+//        "step2": [
+//          "go to place 2",
+//          "talk to NPC#2",
+//          "clear dungeon #1",
+//          "kill boss #1"
+//        ],
+//        "step3": [
+//          "rest at grace #2"
+//        ]
+//      }
+//    }
+//  ]
+//}

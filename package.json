@@ -22,7 +22,8 @@
     "server": "json-server --watch db.json --port 5000",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "concurrently \"react-scripts start\" \" json-server --watch db.json --port 5000\" ",
+    "startWithServer": "concurrently \"json-server --watch db.json --port 5000\" \" react-scripts start\" ",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

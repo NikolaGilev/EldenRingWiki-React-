@@ -17,8 +17,71 @@ import QuestInfo from "./components/Quests/QuestInfo";
 
 const App = () => {
     const [showQuestForm, setShowQuestForm] = useState(false);
-    const [quests, setQuests] = useState([]);
-    const [currQuest,setCurrQuest] = useState([{
+    const [quests, setQuests] = useState([
+        {
+            id: 2,
+            name: "First Quest",
+            completed: true,
+            desc: "Lorem ipsum Lorem ipsum...",
+            steps: {
+                step1: [
+                    "go to place 1",
+                    "talk to NPC#1",
+                    "touch altar"
+                ],
+                step2: [
+                    "go to place 2",
+                    "talk to NPC#2",
+                    "clear dungeon #1",
+                    "kill boss #1"
+                ],
+                step3: "rest at grace #2"
+            }
+        }
+        ,
+        {
+            id: 3,
+            name: "First Quest",
+            completed: true,
+            desc: "Lorem ipsum Lorem ipsum...",
+            steps: {
+                step1: [
+                    "go to place 1",
+                    "talk to NPC#1",
+                    "touch altar"
+                ],
+                step2: [
+                    "go to place 2",
+                    "talk to NPC#2",
+                    "clear dungeon #1",
+                    "kill boss #1"
+                ],
+                step3: "rest at grace #2"
+            }
+        },
+        {
+            id: 4,
+            name: "First Quest",
+            completed: true,
+            desc: "Lorem ipsum Lorem ipsum...",
+            steps: {
+                step1: [
+                    "go to place 1",
+                    "talk to NPC#1",
+                    "touch altar"
+                ],
+                step2: [
+                    "go to place 2",
+                    "talk to NPC#2",
+                    "clear dungeon #1",
+                    "kill boss #1"
+                ],
+                step3: "rest at grace #2"
+            }
+        }
+
+    ]);
+    const [currQuest, setCurrQuest] = useState([{
         id: 1,
         name: "First Quest",
         completed: true,
@@ -64,44 +127,45 @@ const App = () => {
 
 
     const deleteQuest = async (id) => {
-        await fetch(`http://localhost:5000/quests/${id}`,
-            {
-                method: 'DELETE'
-            })
+        // await fetch(`http://localhost:5000/quests/${id}`,
+        //     {
+        //         method: 'DELETE'
+        //     })
 
         setQuests(quests.filter(q => q.id !== id))
     }
 
     const addQuest = async (quest) => {
-        const res = await fetch('http://localhost:5000/quests', {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(quest)
-        })
-        const data = await res.json()
+        // const res = await fetch('http://localhost:5000/quests', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(quest)
+        // })
+        // const data = await res.json()
 
-        setQuests([...quests, data])
+        const id = Math.floor(Math.random()*10000)+1;
+        const newQuest = {id, ...quest}
+        setQuests([...quests, newQuest])
     }
 
     const changeStatustQuest = async (id) => {
-        const toChange = await fetchQuest(id)
-        const updQuest = {...toChange, completed: !toChange.completed}
+        // const toChange = await fetchQuest(id)
+        // const updQuest = {...toChange, completed: !toChange.completed}
+        //
+        // const res = await fetch(`http://localhost:5000/quests/${id}`, {
+        //     method: 'PUT',
+        //     headers: {
+        //         'Content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(updQuest)
+        // })
+        //
+        // const data = await res.json()
 
-        const res = await fetch(`http://localhost:5000/quests/${id}`,{
-            method: 'PUT',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(updQuest)
-        })
-
-        const data = await res.json()
-
-        setQuests(quests.map((q) => q.id === id ? {...q, completed: data.completed} : q))
+        setQuests(quests.map((q) => q.id === id ? {...q, completed: !q.completed} : q))
     }
-
 
 
     return (
