@@ -1,6 +1,13 @@
 import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    let navigate = useNavigate();
+    const routeChange = () =>{
+        let path = `EldenRingWiki-React-/quests`;
+        navigate(path);
+    }
+        
     return (
         <nav className="mb-1 navbar navbar-expand-lg navbar-dark bg-transparent border-5">
             <div className="container">
@@ -34,7 +41,8 @@ const Navbar = () => {
                     </ul>
 
                     <ul className="nav navbar-nav mt-2" style={{marginLeft: '290px'}}>
-                        <li> <input className="text-white mx-3 h-100 bg-dark" type="search" placeholder="Search website"/>  <button className="btn btn-dark" type="submit">Search</button>  </li>
+                        <li> <input className="text-white mx-3 h-100 bg-dark" type="search" placeholder="Search website"/>  
+                            <button className="btn btn-dark" type="submit" onClick={routeChange}>Search</button>  </li>
 
 
                         <li ><a className="mx-3 btn btn-dark" href="#"><span
