@@ -102,28 +102,28 @@ const App = () => {
         }
     }]);
 
-    useEffect(() => {
-        const getQuests = async () => {
-            const questsFromServer = await fetchQuests()
-            setQuests(questsFromServer)
-        }
+    // useEffect(() => {
+    //     const getQuests = async () => {
+    //         const questsFromServer = await fetchQuests()
+    //         setQuests(questsFromServer)
+    //     }
+    //
+    //     getQuests()
+    // }, [])
 
-        getQuests()
-    }, [])
-
-    const fetchQuests = async () => {
-        const res = await fetch('http://localhost:5000/quests')
-        const data = await res.json()
-
-        return data
-    }
-
-    const fetchQuest = async (id) => {
-        const res = await fetch(`http://localhost:5000/quests/${id}`)
-        const data = await res.json()
-
-        return data
-    }
+    // const fetchQuests = async () => {
+    //     const res = await fetch('http://localhost:5000/quests')
+    //     const data = await res.json()
+    //
+    //     return data
+    // }
+    //
+    // const fetchQuest = async (id) => {
+    //     const res = await fetch(`http://localhost:5000/quests/${id}`)
+    //     const data = await res.json()
+    //
+    //     return data
+    // }
 
 
     const deleteQuest = async (id) => {
@@ -181,14 +181,14 @@ const App = () => {
 
                 <div className='container  p-4' style={{background: '#1d1d1b'}}>
                     <Routes>
-                        <Route path='/' element={<Home/>}/>
+                        <Route path='/EldenRingWiki-React-' element={<Home/>}/>
 
                         {/*<Route path='/quests/addQuest' element={<AddQuest onAdd={addQuest}/>}/>*/}
                         {/*<Route path={`/quests/guideForQuest/:id`}*/}
                         {/*       element={<QuestInfo currQuest={currQuest} onMarkDone={changeStatustQuest}/>}*/}
                         {/*/>*/}
 
-                        <Route path='/quests'
+                        <Route path='EldenRingWiki-React-/quests'
                                element={<>
                                    <QuestLines onDelete={deleteQuest} quests={quests}
                                                onMarkDone={changeStatustQuest}
@@ -200,11 +200,11 @@ const App = () => {
                                }
                         />
 
-                        <Route path='/ChooseCharacterList' element={<Characters/>}/>
-                        <Route path='/ChooseCharacterList/VagabondCharacter' element={<Vagabond/>}/>
-                        <Route path='/mapLocations' element={<MapHome/>}/>
-                        <Route path='/RestAtGrace' element={<RestAtGrace/>}/>
-                        <Route path='/GameLore' element={<GameLore/>}/>
+                        <Route path='EldenRingWiki-React-/ChooseCharacterList' element={<Characters/>}/>
+                        <Route path='EldenRingWiki-React-/ChooseCharacterList/VagabondCharacter' element={<Vagabond/>}/>
+                        <Route path='EldenRingWiki-React-/mapLocations' element={<MapHome/>}/>
+                        <Route path='EldenRingWiki-React-/RestAtGrace' element={<RestAtGrace/>}/>
+                        <Route path='EldenRingWiki-React-/GameLore' element={<GameLore/>}/>
 
                     </Routes>
 

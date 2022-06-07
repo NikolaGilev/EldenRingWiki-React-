@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav className="mb-1 navbar navbar-expand-lg navbar-dark bg-transparent border-5">
             <div className="container">
-                <Link className="navbar-brand" to="/"><strong>Elden Ring Guider</strong></Link>
+                <Link className="navbar-brand" to="/EldenRingWiki-React-"><strong>Elden Ring Guider</strong></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent-7"
                         aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
